@@ -39,7 +39,9 @@ app.get("/new", (req, res,) => {
   });
 
 app.post("/new", (req, res) => {
+  if(req.body.messagetext != '' && req.body.messageuser){
     messages.push({text: req.body.messagetext, user: req.body.messageuser, added: added});
+  }
     res.redirect("/")
   })
 

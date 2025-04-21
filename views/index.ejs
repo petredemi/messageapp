@@ -5,18 +5,24 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <h1>messages</h1>
-    <button>
-        <a href="/new">type a message</a>
+    <div class="app">
+    <h1>&#128508; mini messages app &#128508; </h1>
+    <button class="add">
+        <a href="/new">add message</a>
     </button>
         <% messages.forEach((message) => { %>
             <div class="message">
-                <h3><%= message.user %> </h3>
+                <p style="text-align: end;
+                    margin-top: 1px; margin-bottom: 1px; transform: translateY(20px);">
+                    <button >open</button>
+                </p>
+                <h3 style="margin: 5px;"><%= message.user %> </h3>
                 <p><%= message.text %></p>
                 <p style="text-align: end; font-size: 0.8rem;"><%= message.added %></p>
             </div>    
 
         <% }); %>
+    </div>
 
   </body>
 </html>
