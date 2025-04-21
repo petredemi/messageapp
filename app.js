@@ -62,7 +62,7 @@ app.use((err, req, res, next) => {
   res.status(500).send(err.message);
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`messageapp ${PORT}!`);
   
