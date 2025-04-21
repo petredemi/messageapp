@@ -4,7 +4,6 @@ const newRouter = Router();
 const path = require("node:path");
 
 
-newRouter.use(express.urlencoded({ extended: true }));
 
 newRouter.get("/", (req, res,) => {
         res.render("form");
