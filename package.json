@@ -1,9 +1,9 @@
 {
   "name": "messageapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "message",
   "main": "app.js",
-  "engines":{
+  "engines": {
     "node": "20.11.1"
   },
   "scripts": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/petredemi/messageapp.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "petru",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
@@ -25,6 +25,4 @@
   "dependencies": {
     "express": "^4.18.2^"
   }
-  
-
 }
