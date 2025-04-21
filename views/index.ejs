@@ -1,0 +1,23 @@
+<!-- index.ejs -->
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>messages</h1>
+    <button>
+        <a href="/new">type a message</a>
+    </button>
+        <% messages.forEach((message) => { %>
+            <div class="message">
+                <h3><%= message.user %> </h3>
+                <p><%= message.text %></p>
+                <p style="text-align: end; font-size: 0.8rem;"><%= message.added %></p>
+            </div>    
+
+        <% }); %>
+
+  </body>
+</html>
+

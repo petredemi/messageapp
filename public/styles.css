@@ -1,0 +1,28 @@
+body{
+    background-color: aqua;
+}
+li{
+    margin: 3px;
+    width: 350px;
+    margin: 1px solid red;
+    display: flex;
+}
+form{
+    border: 1px solid black;
+}
+label{
+    width: 70px;
+    background-color: antiquewhite;
+}
+input{
+    margin-left: 2px
+}
+.message{
+    border: 1px solid black;
+    margin: 3px;
+    max-width: 400px;
+    padding-left: 10px;
+}
+p{
+    padding-right: 10px;
+}
