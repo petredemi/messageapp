@@ -44,28 +44,22 @@ app.post("/new", (req, res) => {
     res.redirect("/")
   })
   async function bbb(idd){
-    return messages.find((message) => message.id === idd)
+   // return messages.find((message) => message.id === idd)
+    return messages[idd]
   }
   
 async function aaa(req, res){
     let {messageId} = req.params;
-    let message = await bbb(Number(messageId));
+    let message = await bbb(Number(messageId))          //bbb(Number(messageId));
     console.log(typeof message)
     console.log(message)
     res.render('user', {title: 'users', user: message.user,
       text: message.text, added: message.added
-
+    
     });
   }
+  app.use("/:messageId", aaa)
 
-  app.get("/:messageId", aaa)
-
-// app.get("/:messageId", (req, res) =>{
-//   const { messageId } = req.params;
-//   let message = bbb(Number(messageId))
-//   res.render('user', {title: 'users', messnr: messageId, message: message.user});
-// });
-  
 //app.get("/:authorId", (req, res) => {
   //const { authorId } = req.params;
  // res.send(`Author ID: ${authorId}`);

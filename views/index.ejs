@@ -7,9 +7,11 @@
   <body>
     <div class="app">
     <h1>&#128508; mini messages app &#128508; </h1>
-    <button class="add">
-        <a href="/new">message</a>
-    </button>
+        <div class="message" style="border: none;">
+          <button class="add">
+              <a href="/new">message</a>
+          </button>
+        </div>
         <% messages.forEach((message) => { %>
             <div class="message">
                 <p style="text-align: end;
