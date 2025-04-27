@@ -52,7 +52,6 @@ async function aaa(req, res){
     let {messageId} = req.params;
     let message = await bbb(Number(messageId))          //bbb(Number(messageId));
     console.log(typeof message)
-    console.log(message)
     res.render('user', {title: 'users', user: message.user,
       text: message.text, added: message.added
     
