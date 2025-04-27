@@ -14,7 +14,9 @@
             <div class="message">
                 <p style="text-align: end;
                     margin-top: 1px; margin-bottom: 1px; transform: translateY(20px);">
-                    <button >open</button>
+                    <button type="button" id= <%= messages.indexOf(message) %> >
+                      <a href= <%= messages.indexOf(message) %> >open</a>
+                    </button>
                 </p>
                 <h3 style="margin: 5px;"><%= message.user %> </h3>
                 <p><%= message.text %></p>
