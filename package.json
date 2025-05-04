@@ -4,7 +4,7 @@
   "description": "message",
   "main": "app.js",
   "engines": {
-    "node": "19.9.0"
+    "node": "22.14.0"
   },
   "scripts": {
     "start": "node app.js",
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/petredemi/messageapp#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "npm": "^11.3.0"
   }
 }
