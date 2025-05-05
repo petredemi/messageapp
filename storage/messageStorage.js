@@ -25,19 +25,3 @@ class messageStorage {
 
 module.exports = new messageStorage()
 
-/*
-const messages = [
-  {
-    id: 0,
-    text: "Hi there!",
-    user: "Amando",
-    added: added
-  },
-  {
-    id: 1,
-    text: "Hello World!",
-    user: "Charles",
-    added: added
-  }
-];
-*/

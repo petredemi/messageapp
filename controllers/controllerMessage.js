@@ -13,8 +13,6 @@ const validateMessage = [
       .isLength({ min: 1, max: 10 }).withMessage(`Message: ${lengthErr}`),
   ];
 
-
-
 exports.messageListGet = (req, res) =>{
     res.render('index', {
         messages: messageStorage.getMessages()
