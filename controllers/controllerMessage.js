@@ -2,7 +2,7 @@ const messageStorage = require('../storage/messageStorage')
 const {body, validationResult} = require('express-validator')
 
 const alphaErr = "must only contain letters.";
-const lengthErr = "must be between 1 and 10 characters.";
+const lengthErr = "must be between 1 and 100 characters.";
 
 const validateMessage = [
     body("messageuser").trim()
@@ -10,7 +10,7 @@ const validateMessage = [
    //   .isLength({ min: 1, max: 10 }).withMessage(`Message: ${lengthErr}`),
     body("messagetext").trim()
      // .isAlpha().withMessage(`User name: ${alphaErr}`)
-      .isLength({ min: 1, max: 10 }).withMessage(`Message: ${lengthErr}`),
+      .isLength({ min: 1, max: 100 }).withMessage(`Message: ${lengthErr}`),
   ];
 
 exports.messageListGet = (req, res) =>{
