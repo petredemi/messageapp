@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
+    "startonce": "node db/populatedb.js file:///Users/petrudemian/repo/messageapp/db/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
