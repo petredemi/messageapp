@@ -9,4 +9,4 @@ routerMessage.post('/new', controllerMessage.newMessagePost)
 routerMessage.get ('/:messageId', controllerMessage.getMessageGet)
 routerMessage.post('/:id/delete', controllerMessage.deleteMessagePost)
 
-module.exports = routerMessage
+module.exports = routerMessage;

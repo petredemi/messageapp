@@ -10,11 +10,15 @@
     <div class="app">
     <h1>&#128508; mini messages app &#128508; </h1>
         <h3>messages</h3>
+        <% if (locals.rows) {%>
+        <% rows.forEach((row) => { %>
         <div class="message">
-            <h3 style="margin: 5px;"><%= user %> </h3>
-            <p><%= text %></p>
-            <p style="text-align: end; font-size: 0.9rem;"><%= date %></p>
-        </div>   
+            <h3 style="margin: 5px;"><%= row.messageuser %> </h3>
+            <p><%= row.messagetext %></p>
+            <p style="text-align: end; font-size: 0.9rem;"><%= row.added %></p>
+        </div> 
+         <% }); %>
+         <% }%>
         <button class="add">
             <a href="/">back</a>
         </button>

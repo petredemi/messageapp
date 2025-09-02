@@ -23,5 +23,5 @@ class messageStorage {
     }
 }
 
-module.exports = new messageStorage()
+//module.exports = new messageStorage()
 
