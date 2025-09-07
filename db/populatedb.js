@@ -21,8 +21,9 @@ async function main() {
      // connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/messageapp",
   //});
   const client = new Client({
-      connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a.oregon-postgres.render.com/messageapp_15hh",
+      connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh",
     });
+    
   await client.connect();
   await client.query(SQL);
   await client.end();
