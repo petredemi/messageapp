@@ -11,9 +11,7 @@ const validateMessage = [
     body("messagetext").trim()
       .isLength({ min: 1, max: 100 }).withMessage(`Message: ${lengthErr}`),
   ];
-
 exports.messageListGet = async (req, res) => {
-  
    await res.render('index', {
         rows: await db.getMessages(),
     })
@@ -22,8 +20,8 @@ exports.getMessageGet = async (req, res) => {
   //  const {messageId} = req.params;
    // let idx = Number(messageId)
     //let obj = messageStorage.getMessage(messageId)
-    await res.render('user', {
-        rows: await db.getMessage(req.params.messageId)
+    await   res.render('user', {
+            rows: await db.getMessage(req.params.messageId)
     })
 }
 exports.newMessageGet = async (req, res) => {
