@@ -7,8 +7,8 @@
     "node": "22.14.0"
   },
   "scripts": {
-    "start": "node app.js",
-    "startonce": "node db/populatedb.js",
+    "start": "node db/populatedb.js",
+    "adddata": "node db/populatedb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
