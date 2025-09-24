@@ -13,7 +13,7 @@ exports.getMessage = async (mId) => {
    return rows;
 }
 exports.newMessage = async (messageuser, messagetext) => {
-   pool.query("INSERT INTO messages (messageuser, messagetext, added) VALUES($1, $2, $3)", [messageuser, messagetext, added]);
+  await pool.query("INSERT INTO messages (messageuser, messagetext, added) VALUES($1, $2, $3)", [messageuser, messagetext, added]);
    }
 exports.deleteMessage = async (id) =>{
   await pool.query(`DELETE FROM messages WHERE id = ${id}`)

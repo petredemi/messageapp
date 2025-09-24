@@ -17,19 +17,16 @@ VALUES ('Zoia', 'bine', 'today');
 
 
 async function main() {
-  //const client = new Client({
-     // connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/messageapp",
-  //});
-  const client = new Client({
-      connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh",
+    const client = new Client({
+      connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/messageapp",
     });
-    
+  //const client = new Client({
+  //    connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh",
+ //   });
   await client.connect();
   await client.query(SQL);
   await client.end();
-
 }
-
 
 main();
 

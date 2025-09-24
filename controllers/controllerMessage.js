@@ -3,13 +3,15 @@ const {body, validationResult} = require('express-validator')
 const db = require('../db/queries');
 
 const alphaErr = "must only contain letters.";
-const lengthErr = "must be between 1 and 100 characters.";
+const lengthErr = "must be between 1 and 1000 characters.";
+const lengthName = "must be beteew 1 and 20 characters";
 
 const validateMessage = [
     body("messageuser").trim()
-      .isAlpha().withMessage(`User name: ${alphaErr}`),
+      .isAlpha().withMessage(`Name: ${alphaErr}`)
+      .isLength({min:1, max:20}).withMessage((`Name: ${lengthName}`)),
     body("messagetext").trim()
-      .isLength({ min: 1, max: 100 }).withMessage(`Message: ${lengthErr}`),
+      .isLength({ min: 1, max: 1000 }).withMessage(`Message: ${lengthErr}`),
   ];
 exports.messageListGet = async (req, res) => {
    await res.render('index', {
@@ -36,13 +38,13 @@ exports.newMessagePost =  [
 
         const errors = validationResult(req)
         if(!errors.isEmpty()){
-            return res.status(400). render('form', {
+            return res.status(400). render('index', {
                 errors: errors.array(),
             })
         }
     //messageStorage.newMessage({ messageuser, messagetext})
     await db.newMessage(messageuser, messagetext)
-    await res.redirect('/')
+    await res.redirect('/#bottom')
 }]
 exports.deleteMessagePost = async (req, res) => {
     //messageStorage.deleteMessage(req.params.id)

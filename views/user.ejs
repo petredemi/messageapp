@@ -8,19 +8,19 @@
   </head>
   <body>
     <div class="app">
-    <h1>&#128508; mini messages app &#128508; </h1>
+    <h2>&#128508; mini messages app &#128508; </h2>
         <h3>messages</h3>
         <% if (locals.rows) {%>
         <% rows.forEach((row) => { %>
         <div class="message">
-            <h3 style="margin: 5px;"><%= row.messageuser %> </h3>
+            <h4 style="margin: 5px;"><%= row.messageuser %> </h4>
             <p><%= row.messagetext %></p>
             <p style="text-align: end; font-size: 0.9rem;"><%= row.added %></p>
         </div> 
          <% }); %>
          <% }%>
         <button class="add">
-            <a href="/">back</a>
+            <a href="/#bottom">back</a>
         </button>
     
 

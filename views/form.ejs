@@ -3,28 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/form.css">
   </head>
   <body>
-    <%- include("partials/errors.ejs") %>
+    
     <div class="form">
-        <h2>send message</h2>
+        <%- include("partials/errors.ejs") %>
+        <h4>new message</h4>
+<!--       <%- include("partials/errors.ejs") %>  -->
         <form method="POST" action="/new">
            <li>
-               <label for="messageuser">name</label>
+               <label for="messageuser">user: </label>
                <input type="text" name="messageuser" id="user">
            </li>
            <li>
                <label for="messagetext">message</label>
-               <input type="text" name="messagetext" id="text">
+               <textarea type="text" name="messagetext" id="text"></textarea>
            </li>
         
            <button type="submit">
-                  submit    
+                send
             </button>
         </form>
         <button >
-            <a href="/" style="font-size: 1rem;">back</a>
+            <a href="/#bottom" name="bottom" style="font-size: 1rem;">back</a>
         </button>
     </div>
 
