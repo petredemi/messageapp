@@ -1,7 +1,6 @@
 .form{
     background-color: rgba(253, 253, 247, 0.274);
     padding: 5px;
-
     margin: 10px;
     margin-top: 40px;
     border-radius: 10px;
@@ -9,6 +8,7 @@
     max-width: 500px;
     min-width: 360px;
     padding-left: 15px;
+
 }
 
 h4{
@@ -29,6 +29,7 @@ label{
     font-size: 1.1rem;
     margin-bottom: 5px;
     margin-top: 10px;
+    padding: 3px;
 }
 input{
     margin-left: 2px;
@@ -40,3 +41,13 @@ textarea{
     line-height: 1.4;
     padding: 6px;
 }
+.error{
+
+    color: rgb(235, 241, 245);
+    font-size: 1rem;
+}
+.error >li{
+    text-align: center;
+    width: fit-content;
+}
+

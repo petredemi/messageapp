@@ -9,11 +9,11 @@
   <body>
     <div class="app">
     <h2>&#128508; mini messages app &#128508; </h2>
-        <h3>messages</h3>
+      <h3>messages:</h3>
         <% if (locals.rows) {%>
         <% rows.forEach((row) => { %>
         <div class="message">
-            <h4 style="margin: 5px;"><%= row.messageuser %> </h4>
+            <h4 style="margin: 5px;"><i>user:</i> <%= row.messageuser %> </h4>
             <p><%= row.messagetext %></p>
             <p style="text-align: end; font-size: 0.9rem;"><%= row.added %></p>
         </div> 
