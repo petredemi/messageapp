@@ -13,7 +13,7 @@ module.exports = new Pool({
     database: "messageapp_15hh",
     password: "ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq",
     port: 5432, // The default port
-    ssl:true
+    //ssl:true
 });
 
 
