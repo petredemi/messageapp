@@ -1,8 +1,9 @@
 
 <% if (locals.errors) {%>
     <ul class="error">
+      <span style='font-size:30px;margin-left: 40%;'>&#128165;</span>
       <% errors.forEach(function(error) { %>
-        <li><%= error.msg %></li>
+        <li style="width: fit-content;">  <%= error.msg %></li>
       <% }); %>
     </ul>
   <% } %>

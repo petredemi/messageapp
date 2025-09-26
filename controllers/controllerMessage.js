@@ -35,8 +35,8 @@ exports.newMessagePost =  [
     async (req, res) =>{
         const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         let d = new Date()
-        let added = d.getHours() + ':' + d.getMinutes() + ' ' + ' ' + d.getDate() + ' ' + month[d.getMonth() - 1] + ' ' + d.getFullYear()
-
+        let added = d.getHours()+1  + ':' + d.getMinutes() + ' ' + ' ' + d.getDate() + ' ' + month[d.getMonth() - 1] + ' ' + d.getFullYear()
+console.log(d)
         let {messageuser} = await req.body;
         let {messagetext} = await req.body;
 
