@@ -33,6 +33,10 @@ exports.newMessageGet = async (req, res) => {
 exports.newMessagePost =  [
     validateMessage,
     async (req, res) =>{
+        const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        let d = new Date()
+        let added = d.getHours() + ':' + d.getMinutes() + ' ' + ' ' + d.getDate() + ' ' + month[d.getMonth() - 1] + ' ' + d.getFullYear()
+
         let {messageuser} = await req.body;
         let {messagetext} = await req.body;
 
@@ -43,7 +47,7 @@ exports.newMessagePost =  [
             })
         }
     //messageStorage.newMessage({ messageuser, messagetext})
-    await db.newMessage(messageuser, messagetext)
+    await db.newMessage(messageuser, messagetext, added)
     await res.redirect('/#bottom')
 }]
 exports.deleteMessagePost = async (req, res) => {

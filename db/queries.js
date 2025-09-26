@@ -1,7 +1,4 @@
 const pool = require("./pool");
-const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-let d = new Date()
-let added = d.getHours() + ':' + d.getMinutes() + ' ' + ' ' + d.getDate() + ' ' + month[d.getMonth() - 1] + ' ' + d.getFullYear()
 
 exports.getMessages = async () => {
   const { rows } = await pool.query("SELECT * FROM messages");
@@ -12,7 +9,7 @@ exports.getMessage = async (mId) => {
 //  console.log(rows)
    return rows;
 }
-exports.newMessage = async (messageuser, messagetext) => {
+exports.newMessage = async (messageuser, messagetext, added) => {
   await pool.query("INSERT INTO messages (messageuser, messagetext, added) VALUES($1, $2, $3)", [messageuser, messagetext, added]);
    }
 exports.deleteMessage = async (id) =>{
