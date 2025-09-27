@@ -1,7 +1,7 @@
 const pool = require("./pool");
 
 exports.getMessages = async () => {
-  const { rows } = await pool.query("SELECT * FROM messages");
+  const { rows } = await pool.query("SELECT * FROM messages ORDER BY id DESC");
   return Object.values(rows)
 }
 exports.getMessage = async (mId) => {

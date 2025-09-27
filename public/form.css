@@ -1,53 +1,107 @@
-.form{
-    background-color: rgba(253, 253, 247, 0.274);
-    padding: 5px;
-    margin: 10px;
+body{
+    background-color:#160f39 ;
+}
+
+.top{
+    background-color:lightskyblue;
+    margin: auto;
     margin-top: 40px;
+    margin-bottom: 40px;
     border-radius: 10px;
-    width: 100%;
+    width: fit-content;
     max-width: 500px;
     min-width: 360px;
     padding-left: 15px;
+}
 
+.form{
+    background-color: rgba(253, 253, 247, 0.274);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 500px;
+    min-width: 340px;
+    padding-left: 15px;
+    margin: auto;
+}
+form{
+    margin: 8px;
+}
+
+h2{
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin-bottom: 1px;
+    margin: 0px;
+    width: fit-content;
+    margin: auto;
 }
 
 h4{
-    font-size: 1.1rem;
-    font-weight: 600;
+    margin: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(31, 103, 248, 0.754);
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black;
+    width: 120px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+h5{
+    text-align: center;
+    margin: auto;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    width: fit-content;    
 }
 li{
     margin: 3px;
-    min-width: 350px;
+    min-width: 300px;
     margin: 1px solid red;
     display: flex;
-    flex-direction: column;
-    padding-bottom: 5px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 4px;
 }
 label{
     width: 70px;
     background-color: rgb(215, 250, 224);
     font-size: 1rem;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-bottom: 1px;
+    margin-right: 5px;
     padding: 3px;
 }
 input{
-    margin-left: 2px;
-    width: 280px;
-    font-size: 1.1rem;
+    padding: 3px;
+    width: 200px;
 }
 textarea{
     border-radius: 6px;
     line-height: 1.4;
     padding: 6px;
+    width: 100%;
+    min-width: 350px;
 }
 .error{
 
     color: rgb(235, 241, 245);
+    margin-top: 200px;
     font-size: 1rem;
+    max-width: 500px;
+    margin: auto;
 }
 .error >li{
     text-align: center;
     width: fit-content;
 }
-
+.btn{
+    width: 80px;
+    margin-left: 8px;
+}
+.btn >a{
+    font-size: 1.1rem;
+    text-decoration: none;
+}

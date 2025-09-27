@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="/form.css">
   </head>
   <body>
-    
+    <div class="top">
+          <h2>&#128508; mini messages app &#128508; </h2>
+          <h5>for Odin fans</h5>
+      </div>
+    <%- include("partials/errors.ejs") %>
     <div class="form">
-        <%- include("partials/errors.ejs") %>
         <h4>new message</h4>
 <!--       <%- include("partials/errors.ejs") %>  -->
         <form method="POST" action="/new">
@@ -25,8 +28,8 @@
                 <span style="font-size: 1.3rem;">&#128640;</span> send
             </button>
         </form>
-        <button >
-            <a href="/#bottom" name="bottom" style="font-size: 1rem;">back</a>
+        <button class="btn">
+            <a href="/#bottom" name="bottom">back</a>
         </button>
     </div>
 

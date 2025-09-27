@@ -42,7 +42,7 @@ console.log(d)
 
         const errors = validationResult(req)
         if(!errors.isEmpty()){
-            return res.status(400). render('index', {
+            return res.status(400). render('form', {
                 errors: errors.array(),
             })
         }
